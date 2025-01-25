@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.counter-container{
+    padding: 20px;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;     
+    gap: 10px;
+    height: 20vh;
+    text-align: center;
+    border: 2px solid rgb(229, 201, 41); /* Border added */
+    border-radius: 10px; 
+}
+
+.btn{
+    width: 10vh;
+    padding: 3px;
+    align-self: center;
+    background-color: rgb(229, 201, 41);
+    color: white;
+    border-radius: 5px;
+    border-color:  rgb(229, 201, 41);
+    font-size: 15px;
+}
+
+
+#para{
+    font-size: 20px;
+}
