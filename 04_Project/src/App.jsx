@@ -1,14 +1,23 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import StudentCard from './StudentCard'
+import StudentDetail from './StudentDetail'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [students, setDetails] = useState([
+    {sname: "Alex", sAge: 24, sCity: "Delhi"}
+  ])
+  const updateDetails = (details) =>{
+    setDetails([...students, details])
+  }
   return (
     <>
-      
+      <StudentDetail onUpdateDetails={updateDetails}/>
+
+      {students.map((std) => (
+        <StudentCard key={std.sname} {...std}/>
+      ))}
+
     </>
   )
 }
